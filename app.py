@@ -127,7 +127,7 @@ ts_data = covid_data.groupby(["Date"], as_index=False)["Case No."].count()
 ts_data.columns = ["Date", "#Confirmed Cases"]
 
 # Fit a Polynomial to the log values, i.e if exponential then polynomial will refelct this
-z = np.polyfit(ts_data.index.values, np.log(ts_data["#Confirmed Cases"].values), 2)
+z = np.polyfit(ts_data.index.values, np.log(ts_data["#Confirmed Cases"].values), 1)
 f = np.poly1d(z)
 xf = ts_data.Date.append(pd.Series([ts_data.Date.values[-1] + pd.Timedelta(1, "D"),
                                     ts_data.Date.values[-1] + pd.Timedelta(2, "D")])
