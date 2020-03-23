@@ -4,7 +4,6 @@ import pandas as pd
 import json
 
 import dash
-import dash_table
 import dash_core_components as dcc
 import dash_html_components as html
 
@@ -71,7 +70,6 @@ def generate_choropleth_map_chart(covid_data, fc):
 def generate_confirmed_cases_plot(covid_data, f, yf):
     ts_data = covid_data.groupby(["Date"], as_index=False)["Case No."].max()
     ts_data.columns = ["Date", "#Confirmed Cases"]
-    # Note use polynomial fit from Above Graph
     fig = go.Figure()
     # Add traces
     fig.add_trace(go.Scatter(x=ts_data.Date, y=ts_data["#Confirmed Cases"],
