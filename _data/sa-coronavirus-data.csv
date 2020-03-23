@@ -1,0 +1,241 @@
+Date,Case No.,Age,Gender,Province
+05-Mar-20,1,38,MALE,kwazulu-natal
+08-Mar-20,2,39,FEMALE,gauteng
+08-Mar-20,3,38,FEMALE,kwazulu-natal
+10-Mar-20,4,37,FEMALE,kwazulu-natal
+10-Mar-20,5,51,MALE,kwazulu-natal
+10-Mar-20,6,38,MALE,kwazulu-natal
+10-Mar-20,7,41,MALE,kwazulu-natal
+11-Mar-20,8,46,MALE,gauteng
+11-Mar-20,9,40,MALE,kwazulu-natal
+11-Mar-20,10,34,MALE,gauteng
+11-Mar-20,11,33,FEMALE,gauteng
+11-Mar-20,12,57,MALE,gauteng
+11-Mar-20,13,36,MALE,western cape
+12-Mar-20,14,38,MALE,kwazulu-natal
+12-Mar-20,15,50,MALE,western cape
+12-Mar-20,16,39,FEMALE,gauteng
+12-Mar-20,17,57,MALE,gauteng
+13-Mar-20,18,21,FEMALE,gauteng
+13-Mar-20,19,79,MALE,kwazulu-natal
+13-Mar-20,20,46,MALE,western cape
+13-Mar-20,21,27,FEMALE,mpumalanga
+13-Mar-20,22,43,MALE,gauteng
+13-Mar-20,23,52,MALE,kwazulu-natal
+13-Mar-20,24,50,MALE,gauteng
+14-Mar-20,25,76,MALE,gauteng
+14-Mar-20,26,72,FEMALE,gauteng
+14-Mar-20,27,47,MALE,western cape
+14-Mar-20,28,52,MALE,gauteng
+14-Mar-20,29,62,MALE,western cape
+14-Mar-20,30,38,MALE,gauteng
+14-Mar-20,31,19,FEMALE,western cape
+14-Mar-20,32,47,MALE,gauteng
+14-Mar-20,33,27,MALE,gauteng
+14-Mar-20,34,33,FEMALE,gauteng
+14-Mar-20,35,49,MALE,kwazulu-natal
+14-Mar-20,36,34,MALE,gauteng
+14-Mar-20,37,14,FEMALE,western cape
+14-Mar-20,38,73,MALE,western cape
+15-Mar-20,39,32,MALE,western cape
+15-Mar-20,40,60,MALE,gauteng
+15-Mar-20,41,36,MALE,gauteng
+15-Mar-20,42,35,FEMALE,western cape
+15-Mar-20,43,54,MALE,gauteng
+15-Mar-20,44,42,FEMALE,western cape
+15-Mar-20,45,27,MALE,gauteng
+15-Mar-20,46,21,FEMALE,gauteng
+15-Mar-20,47,53,FEMALE,gauteng
+15-Mar-20,48,34,MALE,kwazulu-natal
+15-Mar-20,49,29,MALE,gauteng
+15-Mar-20,50,50,MALE,western cape
+15-Mar-20,51,33,MALE,western cape
+16-Mar-20,52,55,MALE,western cape
+16-Mar-20,53,3,MALE,kwazulu-natal
+16-Mar-20,54,33,MALE,gauteng
+16-Mar-20,55,68,FEMALE,gauteng
+16-Mar-20,56,30,MALE,gauteng
+16-Mar-20,57,39,MALE,gauteng
+16-Mar-20,58,43,FEMALE,gauteng
+16-Mar-20,59,50,MALE,gauteng
+16-Mar-20,60,21,FEMALE,gauteng
+16-Mar-20,61,39,MALE,western cape
+16-Mar-20,62,29,MALE,limpopo
+18-Mar-20,63,55,MALE,mpumalanga
+18-Mar-20,64,37,MALE,gauteng
+18-Mar-20,65,15,MALE,western cape
+18-Mar-20,66,45,MALE,gauteng
+18-Mar-20,67,59,FEMALE,kwazulu-natal
+18-Mar-20,68,5,MALE,kwazulu-natal
+18-Mar-20,69,26,FEMALE,gauteng
+18-Mar-20,70,37,MALE,gauteng
+18-Mar-20,71,3,MALE,western cape
+18-Mar-20,72,54,FEMALE,gauteng
+18-Mar-20,73,52,MALE,gauteng
+18-Mar-20,74,25,MALE,gauteng
+18-Mar-20,75,52,FEMALE,gauteng
+18-Mar-20,76,48,MALE,kwazulu-natal
+18-Mar-20,77,32,FEMALE,gauteng
+18-Mar-20,78,59,MALE,gauteng
+18-Mar-20,79,58,MALE,western cape
+18-Mar-20,80,57,MALE,gauteng
+18-Mar-20,81,60,MALE,gauteng
+18-Mar-20,82,37,FEMALE,kwazulu-natal
+18-Mar-20,83,2,MALE,western cape
+18-Mar-20,84,62,FEMALE,western cape
+18-Mar-20,85,71,FEMALE,western cape
+18-Mar-20,86,25,MALE,gauteng
+18-Mar-20,87,45,MALE,gauteng
+18-Mar-20,88,59,MALE,kwazulu-natal
+18-Mar-20,89,2,MALE,western cape
+18-Mar-20,90,52,MALE,gauteng
+18-Mar-20,91,49,FEMALE,gauteng
+18-Mar-20,92,71,FEMALE,gauteng
+18-Mar-20,93,35,MALE,gauteng
+18-Mar-20,94,34,FEMALE,gauteng
+18-Mar-20,95,51,MALE,western cape
+18-Mar-20,96,35,FEMALE,western cape
+18-Mar-20,97,27,FEMALE,western cape
+18-Mar-20,98,30,FEMALE,gauteng
+18-Mar-20,99,20,MALE,gauteng
+18-Mar-20,100,3,MALE,gauteng
+18-Mar-20,101,54,MALE,kwazulu-natal
+18-Mar-20,102,21,FEMALE,gauteng
+18-Mar-20,103,36,FEMALE,gauteng
+18-Mar-20,104,64,MALE,mpumalanga
+18-Mar-20,105,30,FEMALE,gauteng
+18-Mar-20,106,35,MALE,gauteng
+18-Mar-20,107,34,MALE,gauteng
+18-Mar-20,108,37,MALE,gauteng
+18-Mar-20,109,56,FEMALE,mpumalanga
+18-Mar-20,110,26,FEMALE,western cape
+18-Mar-20,111,60,MALE,western cape
+18-Mar-20,112,68,MALE,western cape
+18-Mar-20,113,51,MALE,western cape
+18-Mar-20,114,54,FEMALE,western cape
+18-Mar-20,115,51,MALE,western cape
+18-Mar-20,116,55,MALE,kwazulu-natal
+19-Mar-20,117,53,FEMALE,western cape
+19-Mar-20,118,30,FEMALE,western cape
+19-Mar-20,119,45,MALE,western cape
+19-Mar-20,120,70,FEMALE,western cape
+19-Mar-20,121,25,FEMALE,western cape
+19-Mar-20,122,56,FEMALE,mpumalanga
+19-Mar-20,123,41,FEMALE,gauteng
+19-Mar-20,124,43,FEMALE,gauteng
+19-Mar-20,125,37,FEMALE,gauteng
+19-Mar-20,126,43,FEMALE,western cape
+19-Mar-20,127,31,MALE,western cape
+19-Mar-20,128,37,FEMALE,gauteng
+19-Mar-20,129,54,FEMALE,gauteng
+19-Mar-20,130,53,FEMALE,western cape
+19-Mar-20,131,22,FEMALE,western cape
+19-Mar-20,132,63,MALE,western cape
+19-Mar-20,133,22,FEMALE,western cape
+19-Mar-20,134,71,FEMALE,kwazulu-natal
+19-Mar-20,135,58,MALE,gauteng
+19-Mar-20,136,26,MALE,kwazulu-natal
+19-Mar-20,137,38,MALE,gauteng
+19-Mar-20,138,70,FEMALE,gauteng
+19-Mar-20,139,30,MALE,gauteng
+19-Mar-20,140,45,MALE,gauteng
+19-Mar-20,141,85,MALE,gauteng
+19-Mar-20,142,64,MALE,gauteng
+19-Mar-20,143,41,MALE,gauteng
+19-Mar-20,144,32,MALE,western cape
+19-Mar-20,145,23,MALE,gauteng
+19-Mar-20,146,5,FEMALE,gauteng
+19-Mar-20,147,44,MALE,gauteng
+19-Mar-20,148,29,FEMALE,kwazulu-natal
+19-Mar-20,149,37,MALE,western cape
+19-Mar-20,150,53,MALE,western cape
+20-Mar-20,151,33,MALE,gauteng
+20-Mar-20,152,32,FEMALE,gauteng
+20-Mar-20,153,56,MALE,gauteng
+20-Mar-20,154,56,FEMALE,gauteng
+20-Mar-20,155,34,FEMALE,gauteng
+20-Mar-20,156,34,MALE,gauteng
+20-Mar-20,157,27,MALE,gauteng
+20-Mar-20,158,22,FEMALE,gauteng
+20-Mar-20,159,31,MALE,gauteng
+20-Mar-20,160,52,FEMALE,gauteng
+20-Mar-20,161,54,MALE,gauteng
+20-Mar-20,162,38,MALE,free state
+20-Mar-20,163,54,MALE,free state
+20-Mar-20,164,55,MALE,free state
+20-Mar-20,165,31,FEMALE,western cape
+20-Mar-20,166,52,MALE,free state
+20-Mar-20,167,68,MALE,free state
+20-Mar-20,168,34,MALE,western cape
+20-Mar-20,169,26,FEMALE,western cape
+20-Mar-20,170,29,FEMALE,western cape
+20-Mar-20,171,69,MALE,western cape
+20-Mar-20,172,58,MALE,western cape
+20-Mar-20,173,23,MALE,western cape
+20-Mar-20,174,43,FEMALE,western cape
+20-Mar-20,175,53,MALE,gauteng
+20-Mar-20,176,32,FEMALE,western cape
+20-Mar-20,177,33,MALE,western cape
+20-Mar-20,178,52,MALE,gauteng
+20-Mar-20,179,20,MALE,gauteng
+20-Mar-20,180,37,MALE,gauteng
+20-Mar-20,181,47,FEMALE,gauteng
+20-Mar-20,182,60,MALE,gauteng
+20-Mar-20,183,62,FEMALE,gauteng
+20-Mar-20,184,23,MALE,gauteng
+20-Mar-20,185,32,MALE,gauteng
+20-Mar-20,186,21,MALE,gauteng
+20-Mar-20,187,34,FEMALE,gauteng
+20-Mar-20,188,40,FEMALE,gauteng
+20-Mar-20,189,74,MALE,free state
+20-Mar-20,190,29,FEMALE,kwazulu-natal
+20-Mar-20,191,41,MALE,gauteng
+20-Mar-20,192,2,MALE,gauteng
+20-Mar-20,193,39,MALE,gauteng
+20-Mar-20,194,32,FEMALE,free state
+20-Mar-20,195,58,MALE,gauteng
+20-Mar-20,196,56,MALE,gauteng
+20-Mar-20,197,63,MALE,western cape
+20-Mar-20,198,28,MALE,gauteng
+20-Mar-20,199,67,MALE,gauteng
+20-Mar-20,200,11,MALE,gauteng
+20-Mar-20,201,30,MALE,gauteng
+20-Mar-20,202,53,MALE,gauteng
+21-Mar-20,203,30,FEMALE,western cape
+21-Mar-20,204,0,MALE,gauteng
+21-Mar-20,205,59,MALE,kwazulu-natal
+21-Mar-20,206,57,FEMALE,western cape
+21-Mar-20,207,55,MALE,western cape
+21-Mar-20,208,28,FEMALE,eastern cape
+21-Mar-20,209,68,MALE,kwazulu-natal
+21-Mar-20,210,55,MALE,gauteng
+21-Mar-20,211,74,FEMALE,western cape
+21-Mar-20,212,52,MALE,western cape
+21-Mar-20,213,44,MALE,western cape
+21-Mar-20,214,26,FEMALE,western cape
+21-Mar-20,215,57,MALE,western cape
+21-Mar-20,216,36,MALE,western cape
+21-Mar-20,217,26,MALE,gauteng
+21-Mar-20,218,34,FEMALE,gauteng
+21-Mar-20,219,40,FEMALE,western cape
+21-Mar-20,220,43,FEMALE,gauteng
+21-Mar-20,221,61,MALE,gauteng
+21-Mar-20,222,6,FEMALE,gauteng
+21-Mar-20,223,29,FEMALE,gauteng
+21-Mar-20,224,45,FEMALE,gauteng
+21-Mar-20,225,52,FEMALE,western cape
+21-Mar-20,226,48,FEMALE,western cape
+21-Mar-20,227,39,MALE,western cape
+21-Mar-20,228,36,MALE,western cape
+21-Mar-20,229,55,FEMALE,western cape
+21-Mar-20,230,64,FEMALE,gauteng
+21-Mar-20,231,67,MALE,gauteng
+21-Mar-20,232,45,MALE,western cape
+21-Mar-20,233,39,MALE,gauteng
+21-Mar-20,234,72,FEMALE,gauteng
+21-Mar-20,235,41,MALE,gauteng
+21-Mar-20,236,37,FEMALE,gauteng
+21-Mar-20,237,30,FEMALE,gauteng
+21-Mar-20,238,65,FEMALE,western cape
+21-Mar-20,239,26,FEMALE,kwazulu-natal
+21-Mar-20,240,34,MALE,western cape
