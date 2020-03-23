@@ -339,14 +339,14 @@ app.layout = html.Div(
             For the most recent information on COVID-19 please see the Government website above. Say safe, and wash thy hands!
         ''', html.Br(), html.Br(),
                          html.P("Contact Email: sacovidtracker@gmail.com"),
-                         html.Br(), html.Br(),
+                         html.Br(),
                          html.A(
                              "GitHub Code Repo - Log Issues Here!",
                              href="https://github.com/kadereub/sa-covid-19",
                  )],
                style={"text-align":"center", "font-weight": "bold"}
         ),
-            html.Br(), html.Br()
+            html.Br()
         ]
     )
 
