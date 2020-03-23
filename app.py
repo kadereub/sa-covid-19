@@ -16,7 +16,7 @@ app = dash.Dash(
 
 server = app.server
 app.config.suppress_callback_exceptions = True
-
+app.title = "SA-COVID-19"
 
 # Load Coronavirus Data and GeoJson
 downloads_path = os.path.expanduser('_data')
@@ -87,7 +87,6 @@ def generate_confirmed_cases_plot(covid_data, f, yf):
                   )
     return fig
 
-
 def generate_heatmap_plot(covid_data):
     ts_data = covid_data.groupby(["Date", "Province"], as_index=False)["Case No."].count()
     ts_data.columns = ["Date", "Province", "#New Cases"]
@@ -129,15 +128,107 @@ map_fig = generate_choropleth_map_chart(covid_data, provinces)
 heatmap_fig = generate_heatmap_plot(covid_data)
 bar_fig = generate_bar_plot(covid_data)
 
-app.layout = html.Div(id="mainContainer", children=[
-    html.Div(id="title",
-        children=[
-            html.H2(children='COVD-19 Tracker for South Africa'),
-            html.Br(),
-            html.H5(children='''
-                Provincial Confirmed Cases
-            ''')]
-    ),
+app.layout = html.Div(
+
+    id="mainContainer", children=[
+        html.Div(id="output-clientside"),
+        html.Div(
+            [
+                html.Div(
+                    [
+                        html.A(
+                            html.Img(
+                                src=app.get_asset_url("virus_icon.png"),
+                                id="plotly-image",
+                                style={
+                                    "height": "60px",
+                                    "width": "auto",
+                                    "margin-bottom": "25px",
+                                },
+                        ), href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019")
+                    ],
+                    className="one-third column",
+                ),
+                html.Div(
+                    [
+                        html.Div(
+                            [
+                                html.H3(
+                                    "COVID-19 Tracker for South Africa",
+                                    style={"margin-bottom": "0px"},
+                                ),
+                                html.H5(
+                                    "For further government information"),
+                                html.H5(
+                                html.A("SA Coronavirus Website",
+                                       href="https://sacoronavirus.co.za/category/press-releases-and-notices/"),
+                                    style={"margin-top": "0px"}
+                                )
+                            ]
+                        )
+                    ],
+                    className="one-half column",
+                    id="title",
+                ),
+                html.Div(
+                    [
+                        html.A(
+                            html.Button("About COVID-19", id="learn-more-button"),
+                            href="https://sacoronavirus.co.za/information-about-the-virus-2/",
+                        )
+                    ],
+                    className="one-third column",
+                    id="button",
+                ),
+            ],
+            id="header",
+            className="row flex-display",
+            style={"margin-bottom": "25px"},
+        ),
+
+        html.Div(
+            children=[
+                html.Div(
+                    [
+                        html.Div(
+                            [html.H6(covid_data.Date.max().strftime("%d-%b"), id="gasText"), html.P("Last Updated")],
+                            id="gas",
+                            className="mini_container",
+                        ),
+                        html.Div(
+                            [html.H6(covid_data.shape[0], id="well_text"), html.P("#Total Cases")],
+                            id="wells",
+                            className="mini_container",
+                        ),
+                        html.Div(
+                            [html.H6(covid_data.groupby(["Date"], as_index=True)["Case No."].count().values[-1],
+                                     id="oilText"), html.P("#New Cases")],
+                            id="oil",
+                            className="mini_container",
+                        ),
+                        html.Div(
+                            [html.H6(covid_data.groupby(["Province"], as_index=True)["Case No."].count().idxmax(axis=0),
+                                     id="waterText"), html.P("Most Cases")],
+                            id="water",
+                            className="mini_container",
+                        ),
+                    ],
+                    id="info-container",
+                    className="row container-display",
+                )
+            ],
+            id="right-column",
+            className="eight-columns",
+        ),
+
+        html.Br(),
+
+        html.Div(className="graph-title",
+                 children=[
+                     html.H5(children='''
+        Provincial Confirmed Cases
+    ''')]
+                 ),
 
     html.Div(
     className="plot-container plotly",
@@ -200,6 +291,26 @@ app.layout = html.Div(id="mainContainer", children=[
             dcc.Graph(
                 figure=bar_fig,
             )]
+    ),
+
+    html.Br(),
+    html.Br(),
+    html.Br(),
+
+    html.Div(
+        style={"position": "dynamic", "left": 0, "bottom":0, "width": "100%"},
+        children=[
+        html.P('''
+        This website and its contents herein, including all data, mapping, and analysis (“Website”), all rights reserved, is provided to the public strictly for educational purposes only. 
+        The Website relies upon publicly available data from the South African Department of Health's COVID-19 Online Resource & News Portal. 
+        Reliance on the Website for medical guidance or use of the Website in commerce is strictly prohibited.
+        Please note this is aimed at only visualizing the covid-19 data in South Africa, the data is updated manually and thus may not always be timely. 
+        For the most recent information on COVID-19 please see the Government website above. Say safe, and wash thy hands!
+        ''',
+        style={"text-align":"center", "font-weight": "bold"}
+        ),
+        html.Br()
+        ]
     )
 
 ])
