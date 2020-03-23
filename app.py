@@ -87,6 +87,17 @@ def generate_confirmed_cases_plot(covid_data, f, yf):
                   )
     return fig
 
+
+def generate_new_cases_plot(covid_data):
+    ts_data = covid_data.groupby(["Date"], as_index=False)["Case No."].count()
+    ts_data.columns = ["Date", "#Confirmed Cases"]
+
+    fig = px.bar(ts_data, x='Date', y='#Confirmed Cases', color='#Confirmed Cases',
+                 color_continuous_scale=px.colors.sequential.Viridis)
+    # fig.update_layout(showlegend=False)
+    return fig
+
+
 def generate_heatmap_plot(covid_data):
     ts_data = covid_data.groupby(["Date", "Province"], as_index=False)["Case No."].count()
     ts_data.columns = ["Date", "Province", "#New Cases"]
@@ -124,6 +135,7 @@ xf = ts_data.Date.append(pd.Series([ts_data.Date.values[-1] + pd.Timedelta(1, "D
 yf = xf.index.values
 
 scatter_fig = generate_confirmed_cases_plot(covid_data, f, yf)
+new_cases_fig = generate_new_cases_plot(covid_data)
 map_fig = generate_choropleth_map_chart(covid_data, provinces)
 heatmap_fig = generate_heatmap_plot(covid_data)
 bar_fig = generate_bar_plot(covid_data)
@@ -260,6 +272,25 @@ app.layout = html.Div(
     html.Br(),
     html.Br(),
 
+        html.Div(className="graph-title",
+                 children=[
+                     html.H5(children='''
+                     Daily New Cases
+                     ''')]
+                 ),
+
+        html.Div(
+            className="plot-container plotly",
+            children=[
+                dcc.Graph(
+                    figure=new_cases_fig,
+                    config={'scrollZoom': False}
+                )]
+        ),
+
+        html.Br(),
+        html.Br(),
+
     html.Div(className="graph-title",
              children=[
                  html.H5(children='''
@@ -300,16 +331,20 @@ app.layout = html.Div(
     html.Div(
         style={"position": "dynamic", "left": 0, "bottom":0, "width": "100%"},
         children=[
-        html.P('''
-        This website and its contents herein, including all data, mapping, and analysis (“Website”), all rights reserved, is provided to the public strictly for educational purposes only. 
-        The Website relies upon publicly available data from the South African Department of Health's COVID-19 Online Resource & News Portal. 
-        Reliance on the Website for medical guidance or use of the Website in commerce is strictly prohibited.
-        Please note this is aimed at only visualizing the covid-19 data in South Africa, the data is updated manually and thus may not always be timely. 
-        For the most recent information on COVID-19 please see the Government website above. Say safe, and wash thy hands!
-        ''',
-        style={"text-align":"center", "font-weight": "bold"}
+        html.P(children=['''
+            This website and its contents herein, including all data, mapping, and analysis (“Website”), all rights reserved, is provided to the public strictly for educational purposes only. 
+            The Website relies upon publicly available data from the South African Department of Health's COVID-19 Online Resource & News Portal. 
+            Reliance on the Website for medical guidance or use of the Website in commerce is strictly prohibited.
+            Please note this is aimed at only visualizing the covid-19 data in South Africa, the data is updated manually and thus may not always be timely. 
+            For the most recent information on COVID-19 please see the Government website above. Say safe, and wash thy hands!
+        ''', html.Br(), html.Br(),
+                         html.A(
+                             "GitHub Code Repo - Log Issues Here!",
+                             href="https://github.com/kadereub/sa-covid-19",
+                 )],
+               style={"text-align":"center", "font-weight": "bold"}
         ),
-        html.Br()
+            html.Br(),
         ]
     )
 
