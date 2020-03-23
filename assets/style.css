@@ -12,6 +12,10 @@ body {
   width: 16.25%;
 }
 
+.eight-columns {
+  align-items: center;
+}
+
 .column,
 .columns {
   margin-left: 0.5%;
