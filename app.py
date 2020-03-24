@@ -20,25 +20,30 @@ app.title = "SA-COVID-19"
 
 # Load Coronavirus Data and GeoJson
 downloads_path = os.path.expanduser('_data')
-raw_data = pd.read_csv(os.path.join(downloads_path, "sa-coronavirus-data.csv"))
+data_source = "https://raw.githubusercontent.com/dsfsi/covid19za/master/data/covid19za_timeline_confirmed.csv"
+raw_data = raw_data = pd.read_csv(data_source)
 with open(os.path.join(downloads_path, "south-africa-provinces-GeoJson.json")) as json_file:
     provinces = json.load(json_file)
 
 
+prov_dict = {"GP": "Gauteng", "WC": "Western Cape", "KZN": "KwaZulu-Natal",
+            "NC": "Nothern Cape", "EC": "Eastern Cape", "FS": "Free State",
+            "NW": "North-West", "LP": "Limpopo", "MP": "Mpumalanga",
+            "UNK": "Unkown"}
+
+
 def clean_data(data):
-    """
-    Cleans the imported raw coronavirus data, to be used in the Dashboard plots
-    """
     covid_data = data.copy(deep=True)
-    covid_data["Age"].fillna(covid_data["Age"].mean())
+    covid_data['Case No.'] = covid_data['case_id']
+    covid_data['Age'] = covid_data['age']#.fillna("unknown")
     age_bins = [0, 17, 35, 50, 65, covid_data["Age"].max()]
-    covid_data["Date"] = pd.to_datetime(covid_data["Date"], infer_datetime_format=True)
-    covid_data["Gender"] = covid_data["Gender"].str.lower().str.title()
-    covid_data["Province"] = covid_data["Province"].str.lower().str.title()
+    covid_data["Date"] = pd.to_datetime(covid_data["date"], format="%d-%m-%Y")
+    covid_data["Gender"] = covid_data["gender"].str.lower().str.title()
+    covid_data["Province"] = covid_data["province"].apply(lambda x: prov_dict[x])
     covid_data.loc[covid_data["Province"] == "Kwazulu-Natal", "Province"] = "KwaZulu-Natal"
-    covid_data["Age"] = covid_data["Age"].fillna(covid_data["Age"].mean())
-    covid_data['Age Group'] = pd.cut(covid_data['Age'], bins=age_bins)
-    return covid_data
+    covid_data['Age Group'] = pd.cut(covid_data['Age'], bins=age_bins).astype(str)
+    covid_data.loc[covid_data['Age Group'] == "nan", 'Age Group'] = "Unknown"
+    return covid_data[["Case No.", "Date", "Age","Gender", "Province", "Age Group"]]
 
 
 def generate_choropleth_map_chart(covid_data, fc):
@@ -125,6 +130,7 @@ def generate_bar_plot(covid_data):
 covid_data = clean_data(raw_data)
 ts_data = covid_data.groupby(["Date"], as_index=False)["Case No."].count()
 ts_data.columns = ["Date", "#Confirmed Cases"]
+unkown_provinces = covid_data.loc[covid_data["Province"] == "Unkown"].shape[0]
 
 # Fit a Polynomial to the log values, i.e if exponential then polynomial will refelct this
 z = np.polyfit(ts_data.index.values, np.log(ts_data["#Confirmed Cases"].values), 1)
@@ -239,7 +245,8 @@ app.layout = html.Div(
                  children=[
                      html.H5(children='''
         Provincial Confirmed Cases
-    ''')]
+    '''),
+                 html.P("Unkown Provinces: " + str(unkown_provinces), style={"font-style": "italic"})]
                  ),
 
     html.Div(
