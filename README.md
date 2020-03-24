@@ -1,6 +1,10 @@
 # South Africa COVID-19
 This repo contains the data and dashboard code to deploy and track the coronavirus spread within South Africa.
+The App is deployed via Heroku, below is the url.
 
+### App 
+
+* https://sa-covid-19.herokuapp.com/
 
 ### References
 
