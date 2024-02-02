@@ -1,4 +1,4 @@
-dash==1.9.1
+dash==2.15.0
 pandas
 numpy
 gunicorn
